@@ -9,6 +9,7 @@ urlpatterns = [
     path('api/users/login/', TokenObtainPairView.as_view(),name='login'),
     path('api/users/refresh/', TokenRefreshView.as_view(),name='refresh'),
     path('api/', include('api.urls')),
+    path("api-auth/", include("rest_framework.urls")),
     path('api/users/logout/', UserLogoutView.as_view(),name='logout'),
 
 ]
